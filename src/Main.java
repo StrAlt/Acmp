@@ -15,5 +15,7 @@ public class Main {
         } else if (x<16 && x>0) x=1;
         System.out.println(Math.(x));
        // fw.close();
+
+
     }
 }
