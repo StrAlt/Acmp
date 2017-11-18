@@ -1,42 +1,20 @@
-
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-
 import java.io.*;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-
-        //FileReader fr = new FileReader("input.txt");
-      //  FileWriter fw = new FileWriter(new File("output.txt"));
-
-
-
-        }
-
-       // fw.close();
-
-
+        int v,t,x;
+        Scanner sc= new Scanner(System.in);
+        //  PrintWriter pw = new PrintWriter(new File("output.txt"));
+        v=sc.nextInt(); t=sc.nextInt();
+        if (v>0) {
+            if (v*t>=109) x = Math.abs((v * t) + 1) % 109; else x=v*t+1;
+            if (x==0) x=109;
+             System.out.println(x);
+        } else if (v==0 || t==0 ) System.out.println(1); else if (v<0) {
+            if (Math.abs(v*t)>=109) {x=Math.abs((v * t) + 1) % 109; x=109-x;} else x=109+(v*t+1);
+            System.out.println(x);}
+        // pw.close();
     }
 
-class JavaArraySort {
-
-    public static void main(String[] args) throws IOException {
-        int R, N, i;
-
-
-        Scanner sc = new Scanner(System.in);
-        R = sc.nextInt();
-        N = sc.nextInt();
-        int arr[] = new int[N];
-        for (i = 0; i < N; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        //сортируем массив чисел
-        Arrays.sort(arr);
-
-        System.out.println(Arrays.toString(arr));
-
     }
-}
